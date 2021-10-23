@@ -1,0 +1,116 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+*{
+    font-family: 'Black Han Sans', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    font-family: 'Black Han Sans', sans-serif;
+    display:flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height:20vh;
+    margin:20px 30px;
+}
+.header__loginform {
+    position:absolute;
+    font-size : 32px;
+    left: 20px;
+}
+.header__column{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    right:30px;
+}
+.header__date{
+    margin-bottom : 5px;
+}
+.header__clock{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__date{
+    font-size : 32px;
+}
+.clock__time{
+    font-size : 64px;
+}
+
+.header__weather{
+    display:flex;
+    flex-direction: column;
+}
+main{
+    display:flex;
+    height : 80vh;
+    margin : 20px 30px;
+    background-color: beige;
+}
+
+.main__column{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+.todoList{
+
+    height : 100%;
+   
+}
+.todoList , .progress , .links ,.quote{
+    border:1px solid black;
+    padding : 50px;
+    margin : 30px;
+}
+.todoList__column{
+    margin-bottom : 20px;
+}
+.todoList__list li{
+    margin-bottom : 20px;
+}
+progress{
+    width : 70%;
+    height : 50px;
+    transition: all 0.5s ease-in-out;
+}
+.progress{
+    height : 20%;
+    padding : 30px;
+}
+
+.links{
+    height:40%;
+}
+
+.hidden{
+    display:none;
+}
+
+.check{
+    font-style : italic;
+}
+.link{
+    display:flex;
+    justify-content: space-between;
+    margin-top : 20px;
+    padding : 30px;
+}
+a[href*="youtube"]{
+    color:red;
+}
+a[href*="instagram"]{
+    color:pink
+}
+a[href*="github"]{
+    color:black;
+}
+i{
+    font-size  : 100px;
+}

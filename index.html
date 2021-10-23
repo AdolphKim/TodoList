@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <form class = header__loginform action="">
+            <input type="text" class="login">
+        </form>
+        <div class="header__clock">
+            <div class="header__date"></div>
+            <span class="clock__time"></span>
+        </div>
+        <div class="header__column">
+            
+            <div class="header__weather">
+                <span class="weather__city"></span>
+                <div class="weather__column">
+                    <span class="weather__temp"></span>
+                    <span class="weather__weather"></span>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <main>
+        <div class="main__column">
+            <div class="todoList">
+                <form class="todoList__column">
+                    <span class="title">Todo</span>
+                    <input type="text" class ="todoList__input">
+                </form>
+                
+                <ul class="todoList__list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="main__column">
+            <div class="progress">
+                <span class="title">progress</span>
+                <div class="progress__column">
+                <span class ="progress__alert">오늘의 TODOLIST 를 설정하세요</span>
+                <progress class ="hidden" id ="todo__progress" max = "100" value ="0"></progress>
+                </div>
+            </div>
+            <div class="links">
+                <span class="title">links</span>
+                <ul class="link">
+                    <li>
+                        <a href="https://youtube.com">
+                            <i class="fab fa-youtube"></i>
+                        </a>     
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <i class="fab fa-instagram"></i>
+                        </a>     
+                    </li>
+                    <li>
+                        <a href="https://nomadcoders.co">
+                            <img src="https://nomadcoders.co/m.svg" alt="">
+                        </a>     
+                    </li>
+                    <li>
+                        <a href="https://github.com">
+                            <i class="fab fa-github"></i>
+                        </a>     
+                    </li>
+                </ul>
+            </div>
+            <div class="quote">
+                <span class="title">quote</span>
+                <div class="quote_quote">하루에 1%씩 발전하자</div>
+                <div class="quote_author">김민석</div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="https://kit.fontawesome.com/4a84dbfbba.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+        <script src="js/time.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/todo.js"></script>
+</body>
+</html>
