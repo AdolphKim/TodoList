@@ -3,6 +3,7 @@ const todolist = document.querySelector(".todoList__list");
 const todoInput = document.querySelector(".todoList__input");
 const todoProgress = document.querySelector("#todo__progress");
 const alert = document.querySelector(".progress__alert");
+const todoComplete = document.querySelector(".progress__complete");
 let todos = [];
 
 function paintTodo(newTodoObj){
@@ -12,19 +13,28 @@ function paintTodo(newTodoObj){
     const cog = document.createElement("i");
     span.innerText = newTodoObj.text;
     span.id = newTodoObj.id;
+    console.log(newTodoObj.checked);
+    console.log(li);
+    if(newTodoObj.checked == "check"){
+        li.classList.add("check")
+    }
     Btn.innerText = "O";
     li.appendChild(span);
     li.appendChild(Btn);
     todolist.appendChild(li);
     Btn.addEventListener("click",optionTodo);
     todos.push(newTodoObj);
+    if(li.classList.contains("check")){
+        todoProgress.value = todoProgress.value + 1;
+    }
     saveTodo();
 }
 function handelSubmitTodo(event){
     event.preventDefault();
     const newTodoObj ={
         text : todoInput.value,
-        id : Date.now()
+        id : Date.now(),
+        checked : ""
     };
     paintTodo(newTodoObj);
     todoInput.value = "";
@@ -52,6 +62,16 @@ function optionTodo(event){
 }
 function checkTodo(event){
     li = event.target.parentElement.parentElement;
+    console.log(event.target.parentElement.parentElement);
+    span = li.querySelector("span");
+    console.log(span.id);
+    todos.map(function(obj){
+        if(obj.id == span.id)
+        {
+            obj.checked = "check"
+        }
+    })
+    saveTodo();
     progressValue(li);
     li.classList.toggle("check");
 }
@@ -94,6 +114,15 @@ function handle(){
     else{
         todoProgress.classList.add(HIDDEN_CLASS);
         alert.classList.remove(HIDDEN_CLASS);
+    }
+
+    if(todoProgress.max == todoProgress.value){
+        todoProgress.classList.add(HIDDEN_CLASS);
+        todoComplete.classList.remove(HIDDEN_CLASS);
+    }
+    else{
+            todoComplete.classList.add(HIDDEN_CLASS);
+       
     }
     
 }

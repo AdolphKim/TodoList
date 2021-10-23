@@ -14,10 +14,27 @@ header{
     height:20vh;
     margin:20px 30px;
 }
+.title{
+    font-size : 24px;
+}
 .header__loginform {
     position:absolute;
     font-size : 32px;
     left: 20px;
+}
+input{
+    border : none;
+    background-color: initial;
+    border-bottom : 1px solid black;
+}
+input:focus , input:active {
+    outline: none;
+}
+
+button{
+    border:none;
+    background-color: rgba(0,0,0,0.1);
+    margin-left : 10px;
 }
 .header__column{
     position:absolute;
@@ -52,7 +69,10 @@ main{
     margin : 20px 30px;
     background-color: beige;
 }
-
+.todoList__column input{
+    margin-left : 10px;
+    font-size : 24px;
+}
 .main__column{
     display:flex;
     flex-direction: column;
@@ -60,9 +80,7 @@ main{
     width: 50%;
 }
 .todoList{
-
     height : 100%;
-   
 }
 .todoList , .progress , .links ,.quote{
     border:1px solid black;
@@ -72,8 +90,21 @@ main{
 .todoList__column{
     margin-bottom : 20px;
 }
+.todoList__list {
+    display: flex;
+    flex-flow : column wrap;
+    overflow-y: hidden;
+}
 .todoList__list li{
-    margin-bottom : 20px;
+    padding : 10px 0px;
+    border-bottom : 1px solid black;
+    width: 100%;
+    font-size : 32px;
+}
+
+.todoList__list li span{
+    padding : 10px 0px;
+    
 }
 progress{
     width : 70%;
@@ -95,6 +126,7 @@ progress{
 
 .check{
     font-style : italic;
+    text-decoration: line-through;
 }
 .link{
     display:flex;
@@ -113,4 +145,11 @@ a[href*="github"]{
 }
 i{
     font-size  : 100px;
+}
+
+.links li{
+    transition:  transform 0.2s ease-in-out;
+}
+.links li:hover{
+    transform : scale(1.5);
 }

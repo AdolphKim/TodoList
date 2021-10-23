@@ -17,6 +17,7 @@ function hadelLoginForm(event){
     username = loginInput.value;
     loginInput.value = "";
     localStorage.setItem(USERNAME_KEY,username)
+    location.reload();
 }
 
 localUsername = localStorage.getItem(USERNAME_KEY)

@@ -10,7 +10,7 @@
 <body>
     <header>
         <form class = header__loginform action="">
-            <input type="text" class="login">
+            <input type="text" class="login" placeholder="이름을 입력하세요">
         </form>
         <div class="header__clock">
             <div class="header__date"></div>
@@ -33,11 +33,11 @@
             <div class="todoList">
                 <form class="todoList__column">
                     <span class="title">Todo</span>
-                    <input type="text" class ="todoList__input">
+                    <input type="text" class ="todoList__input" placeholder="오늘 뭐해야하지?">
                 </form>
                 
                 <ul class="todoList__list">
-
+                    
                 </ul>
             </div>
         </div>
@@ -47,6 +47,7 @@
                 <div class="progress__column">
                 <span class ="progress__alert">오늘의 TODOLIST 를 설정하세요</span>
                 <progress class ="hidden" id ="todo__progress" max = "100" value ="0"></progress>
+                <span class="progress__complete hidden">오늘의 일정을 끝마쳤습니다 ! 고생하셨습니다.</span>
                 </div>
             </div>
             <div class="links">
