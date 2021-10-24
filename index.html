@@ -12,12 +12,19 @@
         <form class = header__loginform action="">
             <input type="text" class="login" placeholder="이름을 입력하세요">
         </form>
+        </video>
         <div class="header__clock">
             <div class="header__date"></div>
             <span class="clock__time"></span>
         </div>
+        <iframe
+        id = musicplay 
+        width="200" height="50" 
+        src="https://www.youtube.com/embed/nxKfi-6EtmY?autoplay=1" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
         <div class="header__column">
-            
             <div class="header__weather">
                 <span class="weather__city"></span>
                 <div class="weather__column">
@@ -39,7 +46,9 @@
                 <ul class="todoList__list">
                     
                 </ul>
+                
             </div>
+            
         </div>
         <div class="main__column">
             <div class="progress">
@@ -51,7 +60,10 @@
                 </div>
             </div>
             <div class="links">
+                <form class = links__searchForm action="">
                 <span class="title">links</span>
+                <input type="text" class="links__search" placeholder="Search">
+                </form>
                 <ul class="link">
                     <li>
                         <a href="https://youtube.com">
@@ -77,8 +89,10 @@
             </div>
             <div class="quote">
                 <span class="title">quote</span>
-                <div class="quote_quote">하루에 1%씩 발전하자</div>
-                <div class="quote_author">김민석</div>
+                <div class="quote__column">
+                <div class="quote__quote">하루에 1%씩 발전하자</div>
+                <div class="quote__author">김민석</div>
+                </div>
             </div>
         </div>
         
@@ -88,5 +102,8 @@
         <script src="js/time.js"></script>
         <script src="js/weather.js"></script>
         <script src="js/todo.js"></script>
+        <script src="js/link.js"></script>
+        <script src="js/quote.js"></script>
+        <script src="js/background.js"></script>
 </body>
 </html>

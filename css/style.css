@@ -1,8 +1,13 @@
 @import "./reset.css";
+@import "./root.css";
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 *{
     font-family: 'Black Han Sans', sans-serif;
     box-sizing: border-box;
+}
+body{
+    color:white;
+    overflow: hidden;
 }
 header{
     font-family: 'Black Han Sans', sans-serif;
@@ -10,7 +15,6 @@ header{
     position:relative;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
     height:20vh;
     margin:20px 30px;
 }
@@ -21,6 +25,11 @@ header{
     position:absolute;
     font-size : 32px;
     left: 20px;
+}
+iframe{
+    position:absolute;
+    bottom:0px;
+    right:0px;
 }
 input{
     border : none;
@@ -67,7 +76,6 @@ main{
     display:flex;
     height : 80vh;
     margin : 20px 30px;
-    background-color: beige;
 }
 .todoList__column input{
     margin-left : 10px;
@@ -80,10 +88,10 @@ main{
     width: 50%;
 }
 .todoList{
-    height : 100%;
+    height : 85%;
 }
 .todoList , .progress , .links ,.quote{
-    border:1px solid black;
+    border: var(--border);
     padding : 50px;
     margin : 30px;
 }
@@ -97,7 +105,7 @@ main{
 }
 .todoList__list li{
     padding : 10px 0px;
-    border-bottom : 1px solid black;
+    border-bottom : var(--border);
     width: 100%;
     font-size : 32px;
 }
@@ -112,12 +120,21 @@ progress{
     transition: all 0.5s ease-in-out;
 }
 .progress{
-    height : 20%;
-    padding : 30px;
+    height : 15%;
+    padding : 20px;
 }
-
+.progress__column{
+    display: flex;
+    justify-content: center;
+    margin-top : 10px;
+}
+.progress span{
+    text-align: center;
+    font-size: 24px;
+}
 .links{
-    height:40%;
+    height:35%;
+    padding : 30px;
 }
 
 .hidden{
@@ -132,7 +149,12 @@ progress{
     display:flex;
     justify-content: space-between;
     margin-top : 20px;
-    padding : 30px;
+    padding:30px;
+    
+}
+.links__search{
+    margin-left : 10px;
+    font-size : 24px;
 }
 a[href*="youtube"]{
     color:red;
@@ -144,7 +166,7 @@ a[href*="github"]{
     color:black;
 }
 i{
-    font-size  : 100px;
+    font-size  : 80px;
 }
 
 .links li{
@@ -152,4 +174,35 @@ i{
 }
 .links li:hover{
     transform : scale(1.5);
+}
+.link img{
+    width:90px;
+}
+.quote{
+    box-sizing: border-box;
+    height:20%;
+    padding : 30px;
+}
+.quote__column{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.quote__quote{
+    font-size : 24px;
+}
+.quote__author{
+    font-size : 20px;
+    color : rgba(0,0,0,0.3);
+}
+
+.backgroundimg{
+    z-index: -1;
+    position: absolute;
+    opacity: 0.8;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100vw;
 }

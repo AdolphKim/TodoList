@@ -13,8 +13,6 @@ function paintTodo(newTodoObj){
     const cog = document.createElement("i");
     span.innerText = newTodoObj.text;
     span.id = newTodoObj.id;
-    console.log(newTodoObj.checked);
-    console.log(li);
     if(newTodoObj.checked == "check"){
         li.classList.add("check")
     }
@@ -62,13 +60,15 @@ function optionTodo(event){
 }
 function checkTodo(event){
     li = event.target.parentElement.parentElement;
-    console.log(event.target.parentElement.parentElement);
     span = li.querySelector("span");
-    console.log(span.id);
+
     todos.map(function(obj){
-        if(obj.id == span.id)
+        if(obj.id == span.id && obj.checked !="check")
         {
-            obj.checked = "check"
+            obj.checked = "check";
+        }
+        else if(obj.id == span.id && obj.checked =="check"){
+            obj.checked ="";
         }
     })
     saveTodo();
@@ -103,8 +103,6 @@ function saveTodo(){
     }
 }
 const localTodos = JSON.parse(localStorage.getItem("todos"))
-
-console.log(todoProgress.max);
 setInterval(handle,1000)
 function handle(){
     if(todoProgress.max != 100){
