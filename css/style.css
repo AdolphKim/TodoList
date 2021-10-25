@@ -206,3 +206,44 @@ i{
     height:100%;
     width:100vw;
 }
+
+@media screen and (max-width : 1550px) {
+    header form{
+        display:none;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .links{
+        display:none;
+    }
+    main{
+        display:flex;
+        flex-direction: column;
+    }
+    .main__column{
+        width:95%;
+        height:50%;
+        margin:0px;
+    }
+    .todoList , .progress , .links ,.quote{
+        width:100%;
+        border:none;
+    }
+    .backgroundimg{
+        height : 100vh;
+    }
+    .todoList__list{
+        overflow-y: hidden;
+    }
+    .todoList{
+        z-index: 5;
+    }
+}
+
+@media screen and (max-width : 740px) {
+    .header__column,iframe{
+        display:none;
+    }
+    
+}
