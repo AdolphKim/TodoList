@@ -1,5 +1,5 @@
 const img = [
-    "img/back01.jpg","img/back02.jpg","img/back03.jpg","img/back04.jpg"
+    "img/back01.jpg","img/back03.jpg"
 ]
 
 const backImg = document.createElement("img");
